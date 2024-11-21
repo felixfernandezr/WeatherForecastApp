@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main">
+
+        <SearchView
+            android:id="@+id/svCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:queryHint="Ciudad"
+            android:iconifiedByDefault="false"/>
+
+        <TextView
+            android:id="@+id/tvLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/svCity"
+            app:layout_constraintBottom_toTopOf="@+id/rvMain"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.69"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoading"
+            app:layout_constraintBottom_toTopOf="@id/showForecastBtn" />
+
+        <Button
+            android:id="@+id/showForecastBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pronóstico Extendido"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvMain"
+            />
+
+        <Button
+            android:id="@+id/showSearchHistoryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Historial de Busquedas"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showForecastBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
