@@ -64,5 +64,3 @@ An Android application for searching and displaying both current and extended we
 Check out the demo video of the app:
 
 [![Weather App Demo](https://img.youtube.com/vi/0cB-uqg27Qg/0.jpg)](https://youtu.be/0cB-uqg27Qg?feature=shared)
-
----
